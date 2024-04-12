@@ -354,10 +354,10 @@ class BipedalWalkerCustom(gym.Env):
             self.terrain_y.append(y)
             counter -= 1
             if counter == 0:
-                counter = self.np_random.randint(
+                counter = self.np_random.integers(
                     TERRAIN_GRASS / 2, TERRAIN_GRASS)
                 if state == self.GRASS and hardcore:
-                    state = self.np_random.randint(1, self._STATES_)
+                    state = self.np_random.integers(1, self._STATES_)
                     oneshot = True
                 else:
                     state = self.GRASS
